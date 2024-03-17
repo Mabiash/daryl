@@ -1,0 +1,63 @@
+body{
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.con{
+    height: 98%;
+    width: 99%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.btn{
+    padding: 7px 20px;
+    margin: 0 2px;
+    border: 1px solid aqua;
+    outline: 0;
+    background-color: #000;
+    color: rgb(0, 255, 255);
+    border-radius: 5px;
+    transition: 150ms all;
+    box-shadow: 0 0 5px rgba(0, 255, 255);
+    position: relative;
+   
+}
+
+.container{
+    width: 30%;
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    width:150%;
+    height: 50%;
+    background-image: linear-gradient(aqua, violet, yellow);    
+    animation: ikot 3s linear infinite;
+    z-index: 1;
+}
+
+@keyframes ikot {
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+.btn:hover{
+    transform: scale(110%);
+}
